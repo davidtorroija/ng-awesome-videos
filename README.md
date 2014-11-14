@@ -1,8 +1,8 @@
-## ng-app-example-moviecity
+## ng-awesome-videos
 
 The motivation of this project was to demostrate my seniority in JS
 
-##Technologies used: 
+##Technologies used:
 Angular, Bootstrap, Yeoman, Grunt, Bower, UnderScore, moment, SASS, Compass, HTML5, etc.
 
 
