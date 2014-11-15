@@ -1,10 +1,12 @@
 <!doctype html>
 <html class="no-js">
   <head>
+    <title>David Torroija Awesome Videos</title>
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="author" content="">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <link rel="stylesheet" href="bower_components/chosen/chosen.css">
@@ -14,33 +16,22 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+        <!-- Bootstrap Core CSS -->
+    <link href="styles/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="styles/css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="styles/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
   </head>
-  <body ng-app="videosApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <body id="page-top" ng-app="videosApp" class="index">
 
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#/">Home</a></li>
-          <!-- <li><a ng-href="#/movies">Movies</a></li>
-          <li><a ng-href="#/movies/1">Actors</a></li> -->
-        </ul>
-        <h3 class="text-muted">Awesome Videos</h3>
-
-        <!-- <img src="images/logo.png"> -->
-      </div>
-
-      <div ng-view=""></div>
-
-      <div class="footer">
-        David Torroija
-      </div>
-    </div>
-
+    <div ng-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -88,22 +79,30 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="styles/js/classie.js"></script>
+    <script src="styles/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="bower_components/chosen/chosen.jquery.js"></script>
 
-        <script src="scripts/core/model/module.js"></script>
-        <script src="scripts/core/model/model.js"></script>
-        <script src="scripts/core/service/module.js"></script>
-        <script src="scripts/core/service/youtubeService.js"></script>
+    <script src="scripts/core/model/module.js"></script>
+    <script src="scripts/core/model/model.js"></script>
+    <script src="scripts/core/service/module.js"></script>
+    <script src="scripts/core/service/youtubeService.js"></script>
 
-        <script src="scripts/app.js"></script>
-        <script src="scripts/main/controllers/main.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/main/controllers/main.js"></script>
 
-        <script src="scripts/movies/module.js"></script>
-        <script src="scripts/movies/movieModel.js"></script>
-        <script src="scripts/movies/controllers/movies.js"></script>
+    <script src="scripts/movies/module.js"></script>
+    <script src="scripts/movies/movieModel.js"></script>
+    <script src="scripts/movies/controllers/movies.js"></script>
 
-        <script src="scripts/movies/controllers/moviesEdit.js"></script>
-        <!-- endbuild -->
+    <script src="scripts/movies/controllers/moviesEdit.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

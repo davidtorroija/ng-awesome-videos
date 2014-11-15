@@ -22,7 +22,7 @@ angular.module('Service')
 
       return{
         title: video.title.$t,
-        content: video.media$group.media$description.$t,
+        content: video.media$group.media$description.$t.length > 25 ? video.media$group.media$description.$t.substr(0,22) + '...' : video.media$group.media$description.$t,
         author : video.author[0].name.$t,
         authorURL : video.author[0].uri.$t,
         url: video.media$group.media$player.url,
