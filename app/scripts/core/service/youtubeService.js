@@ -26,7 +26,7 @@ angular.module('Service')
         author : video.author[0].name.$t,
         authorURL : video.author[0].uri.$t,
         url: video.media$group.media$player.url,
-        thumbnail: video.media$group.media$thumbnail[0].url
+        thumbnail: video.media$group.media$thumbnail[0].height > 300 ? video.media$group.media$thumbnail[0].url : video.media$group.media$thumbnail[1].url
       };
     });
 
