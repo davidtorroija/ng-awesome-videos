@@ -25,7 +25,7 @@ angular.module('Service')
         content: video.media$group.media$description.$t,
         author : video.author[0].name.$t,
         authorURL : video.author[0].uri.$t,
-        url: video.media$group.media$content[0].url,
+        url: video.media$group.media$player.url,
         thumbnail: video.media$group.media$thumbnail[0].url
       };
     });
@@ -47,8 +47,8 @@ angular.module('Service')
         $location.path('/');
       });
     },
-    getVideosBySearch: function() {
-      return jsonpRequest([youtubeFeeds,'videos?q=puppy&max-results=30&format=5'].join(''), params)
+    getVideosBySearch: function(searchText) {
+      return jsonpRequest([youtubeFeeds,'videos?q='+searchText+'&max-results=30&format=5'].join(''), params)
       .then(function(data){
         return getResults(data);
       })

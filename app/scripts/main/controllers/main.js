@@ -1,7 +1,7 @@
 'use strict';
 
  angular.module('videosApp')
- .controller('MainCtrl', function ($scope, youtubeVideos, youtubeVideoService,$location) {
+ .controller('MainCtrl', function ($scope, youtubeVideos, youtubeVideoService, $location) {
 
   $scope.videos = youtubeVideos.results;
 
@@ -13,8 +13,14 @@
     window.open(url,'_blank');
   };
 
-  $scope.$watch('search',function(data){
-    console.log(data);
+  $scope.$watch('search',function(newData, oldData){
+    if(newData !== oldData){
+      youtubeVideoService.getVideosBySearch(newData)
+      .then(function(searchResult){
+        $scope.videos = searchResult.results;
+        $scope.mainTitle = searchResult.title;
+      });
+    }
   },true);
 
   $scope.getLocation = function() {

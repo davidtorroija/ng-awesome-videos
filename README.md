@@ -23,7 +23,11 @@ Build Project
 `bower install`
 
 Run Server
-`grunt server`
+`grunt serve`
+
+Create Production App with all minified, compressed, etc
+(this creates the dist folder that is ready to deploy in production)
+`grunt build` and then `grunt serve:dist`
 
 ### License
 
