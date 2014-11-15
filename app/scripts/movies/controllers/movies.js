@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name moviecityApp.controller:MainCtrl
+ * @name videosApp.controller:MainCtrl
  * @description
  * # MoviesCtrl
- * Controller of the moviecityApp
+ * Controller of the videosApp
  */
-angular.module('moviecityApp')
+angular.module('videosApp')
   .controller('MoviesCtrl', function ($scope,movie) {
     console.log(movie);
 

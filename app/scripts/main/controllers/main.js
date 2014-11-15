@@ -1,24 +1,47 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name moviecityApp.controller:MainCtrl
- * @description
- * # MoviesEditCtrl
- * Controller of the moviecityApp
- */
- angular.module('moviecityApp')
- .controller('MainCtrl', function ($scope, movies, movieModel,$location) {
-  $scope.movies = movies;
+ angular.module('videosApp')
+ .controller('MainCtrl', function ($scope, youtubeVideos, youtubeVideoService,$location) {
 
-  $scope.getLocation = function(val) {
-    return movieModel.get()
+  $scope.videos = youtubeVideos.results;
+
+  $scope.mainTitle = youtubeVideos.title;
+
+  console.log(youtubeVideos);
+
+  $scope.openInNewTab = function openInNewTab(url) {
+    window.open(url,'_blank');
+  };
+
+  $scope.$watch('search',function(data){
+    console.log(data);
+  },true);
+
+  $scope.getLocation = function() {
+    return youtubeVideoService.getVideosBySearch()
     .then(function(data){
       return data;
     });
   };
 
   $scope.select = function(){
-    $location.path('/movies/' + $scope.selected);
+    $location.path('/youtubeVideos/' + $scope.selected);
   };
+})
+//the route config is intentionally here to quickly configure in the same module
+.config(function ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: 'scripts/main/views/main.html',
+    controller: 'MainCtrl',
+    resolve: {
+      youtubeVideos: function($location,$route,youtubeVideoService) {
+        var id = $route.current.params.idMovie;
+        return youtubeVideoService.getMostPopularVideos()
+        .catch(function() {
+          $location.path('/');
+        });
+      },
+    }
+  });
 });

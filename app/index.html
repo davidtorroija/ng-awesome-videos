@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="moviecityApp">
+  <body ng-app="videosApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -29,8 +29,9 @@
           <!-- <li><a ng-href="#/movies">Movies</a></li>
           <li><a ng-href="#/movies/1">Actors</a></li> -->
         </ul>
-        <h3 class="text-muted">Movie City</h3>
+        <h3 class="text-muted">Awesome Videos</h3>
 
+        <!-- <img src="images/logo.png"> -->
       </div>
 
       <div ng-view=""></div>
@@ -83,6 +84,7 @@
     <script src="bower_components/ngstorage/ngStorage.js"></script>
     <script src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-chosen-localytics/chosen.js"></script>
+    <script src="bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -91,7 +93,8 @@
 
         <script src="scripts/core/model/module.js"></script>
         <script src="scripts/core/model/model.js"></script>
-        <script src="scripts/core/model/initializeLocalStorage.js"></script>
+        <script src="scripts/core/service/module.js"></script>
+        <script src="scripts/core/service/youtubeService.js"></script>
 
         <script src="scripts/app.js"></script>
         <script src="scripts/main/controllers/main.js"></script>
@@ -99,12 +102,6 @@
         <script src="scripts/movies/module.js"></script>
         <script src="scripts/movies/movieModel.js"></script>
         <script src="scripts/movies/controllers/movies.js"></script>
-
-        <script src="scripts/genres/module.js"></script>
-        <script src="scripts/genres/genreModel.js"></script>
-
-        <script src="scripts/actors/module.js"></script>
-        <script src="scripts/actors/actorModel.js"></script>
 
         <script src="scripts/movies/controllers/moviesEdit.js"></script>
         <!-- endbuild -->

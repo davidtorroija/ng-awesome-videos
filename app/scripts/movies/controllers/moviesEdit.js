@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name moviecityApp.controller:MainCtrl
+ * @name videosApp.controller:MainCtrl
  * @description
  * # MoviesEditCtrl
- * Controller of the moviecityApp
+ * Controller of the videosApp
  */
-angular.module('moviecityApp')
+angular.module('videosApp')
   .controller('MoviesEditCtrl', function ($scope, movie,movieModel, actors, genres,$location) {
 
     $scope.movie = movie;
